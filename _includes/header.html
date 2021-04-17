@@ -1,0 +1,25 @@
+<header>
+  <a class="sr-only" href="#content">Skip to main content</a>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">行知番茄</a>
+      </div>
+      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        <ul id="nav_id" class="nav navbar-nav">
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li {% if page.category == 'news' %}class="active"{% endif %}><a href="/">动态</a></li>
+          <li {% if page.category == 'blog' %}class="active"{% endif %}><a href="/blog.html">博客</a></li>
+          <li {% if page.category == 'readme' %}class="active"{% endif %}><a href="/README.html">关于</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

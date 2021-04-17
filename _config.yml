@@ -1,0 +1,15 @@
+encoding: UTF-8
+
+highlighter: pygments
+# paginate: 8
+permalink: /:title
+
+markdown: rdiscount
+
+title: 行知番茄
+nickname: 行知番茄
+url: https://focus.ahxz.vip
+img_url: https://focus.ahxz.vip
+
+author: wenin819
+email: wenin819@gmail.com

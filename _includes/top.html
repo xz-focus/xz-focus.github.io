@@ -1,0 +1,35 @@
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="{{ site.title }}" />
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}行知番茄{% endif %}" />
+  <meta name="keywords" content="{% if page.keywords %},{{ page.keywords }}{% endif %}" />
+  <link rel="icon" type="image/png" href="/images/icon.png" />
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" />
+  <link href="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ site.url }}/css/normalize.css" />
+  <link rel="stylesheet" href="{{ site.url }}/css/main.css" />
+  <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+  <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+  <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+<script>
+  $(function(){
+    $('a').each(function(){
+      var url = $(this).attr('href');
+      if(!url) {
+        return;
+      }
+      if(('' == '{{ site.url }}' || -1 == url.indexOf('{{ site.url }}'))
+        && '#' != url.charAt(0)
+        && '/' != url.charAt(0)
+        && -1 == url.indexOf('javascript:void()')) {
+        $(this).attr('target', '_blank');
+      }
+    });
+  });
+</script>
+</head>
