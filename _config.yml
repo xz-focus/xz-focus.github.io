@@ -1,6 +1,6 @@
 encoding: UTF-8
 
-highlighter: pygments
+highlighter: rouge
 # paginate: 8
 permalink: /:title
 
